@@ -9,6 +9,8 @@
 !/var/cache
 /var/cache/*
 !var/cache/.gitkeep
+/web/images
+/web/js
 !/var/logs
 /var/logs/*
 !var/logs/.gitkeep
@@ -19,3 +21,5 @@
 /vendor/
 /web/assets
 /web/bundles/
+/.idea/vcs.xml
+/.idea/workspace.xml
