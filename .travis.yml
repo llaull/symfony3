@@ -24,6 +24,7 @@ matrix:
     - php: nightly
     - env: SYMFONY_VERSION="2.7.x-dev"
     - env: SYMFONY_VERSION="2.8.x-dev"
+    - env: SYMFONY_VERSION="3.0.x"
 
 before_install:
   - composer self-update
