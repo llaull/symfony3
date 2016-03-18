@@ -10,10 +10,10 @@ before_script:
   - mysql -e 'create database test;'
   - cp app/config/parameters.yml.travis app/config/parameters.yml
   - composer install --dev --no-interaction
-  - php app/console doctrine:schema:update --force
-  - php app/console fos:user:create test test test --super-admin
-  - php app/console doctrine:migrations:migrate -n
-  - php app/console cache:clear
+  - php bin/console doctrine:schema:update --force
+  - php bin/console fos:user:create test test test --super-admin
+  - php bin/console doctrine:migrations:migrate -n
+  - php bin/console cache:clear
 
 script:
   - phpunit -c app/
