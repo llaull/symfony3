@@ -1,26 +1,11 @@
 language: php
 sudo: false
 
-env:
-  global:
-    - SYMFONY_VERSION=""
-
-
-matrix:
-  fast_finish: true
-  include:
-    - php: 5.6
-      env: SYMFONY_VERSION="2.8.x-dev"
-  allow_failures:
-    - env: SYMFONY_VERSION="2.8.x-dev"
-    - env: SYMFONY_VERSION="3.0.x"
-
 before_install:
   - composer self-update
-  - if [ "$SYMFONY_VERSION" != "" ]; then composer require --dev --no-update symfony/symfony:$SYMFONY_VERSION; fi
 
 install:
-  - composer install -n
+  - composer update
 
 before_script:
   - php app/console doctrine:schema:create -n
