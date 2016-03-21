@@ -3,7 +3,6 @@ sudo: false
 
 before_install:
   - composer self-update
-  - mkdir src
   - cd src
   - git clone https://github.com/llaull/AppBundleX.git
   - vm AppBundleX AppBundle
