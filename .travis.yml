@@ -6,10 +6,10 @@ before_install:
   - cd src
   - git clone https://github.com/llaull/AppBundleX.git
   - git clone https://github.com/llaull/domotikBundle.git
-  - ls
+  - ../
 
 install:
-  - composer update
+  - composer install
 
 before_script:
   - php app/console doctrine:schema:create -n
