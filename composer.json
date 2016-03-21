@@ -10,16 +10,6 @@
     "autoload-dev": {
         "psr-4": { "Tests\\": "tests/" }
     },
-    "repositories": [
-        {
-            "name": "appBundle",
-            "type": "git",
-            "url": "https://github.com/llaull/AppBundleX.git"
-        },{
-            "type": "vcs",
-            "url": "https://github.com/llaull/domotikBundle.git"
-        }
-    ],
     "require": {
         "php": ">=5.5.9",
         "symfony/symfony": "3.*",
