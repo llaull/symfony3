@@ -6,9 +6,7 @@ before_install:
   - cd src
   - git clone https://github.com/llaull/AppBundleX.git
   - git clone https://github.com/llaull/domotikBundle.git
-  - mkdir AppBundle
-  - mkdir Domotique
-  - vm AppBundleX/* AppBundle
+  - ls
 
 install:
   - composer update
