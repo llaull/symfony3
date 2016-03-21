@@ -17,11 +17,11 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             //AppBundle avec de frond et le back office
-//            new AppBundle\BackBundle\BackOfficeBundle(),
-//            new AppBundle\FrondBundle\FrondOfficeBundle(),
+            new AppBundle\BackBundle\BackOfficeBundle(),
+            new AppBundle\FrondBundle\FrondOfficeBundle(),
             // bundle domotique
-//            new Domotique\DomoboxBundle\DomotiqueDomoboxBundle(),
-//            new Domotique\ReseauBundle\DomotiqueReseauBundle(),
+            new Domotique\DomoboxBundle\DomotiqueDomoboxBundle(),
+            new Domotique\ReseauBundle\DomotiqueReseauBundle(),
             // add by composer
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new FOS\UserBundle\FOSUserBundle(),
