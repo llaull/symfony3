@@ -5,7 +5,10 @@ before_install:
   - composer self-update
   - cd src
   - git clone https://github.com/llaull/AppBundleX.git
-  - vm AppBundleX AppBundle
+  - git clone https://github.com/llaull/domotikBundle.git
+  - mkdir AppBundle
+  - mkdir Domotique
+  - vm AppBundleX/* AppBundle
 
 install:
   - composer update
