@@ -12,7 +12,8 @@
     },
     "repositories": [
         {
-            "type": "vcs",
+            "name": "appBundle",
+            "type": "git",
             "url": "https://github.com/llaull/AppBundleX"
         },{
             "type": "vcs",
@@ -31,7 +32,8 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
         "symfony/assetic-bundle": "^2.7",
-        "friendsofsymfony/user-bundle": "dev-master"
+        "friendsofsymfony/user-bundle": "dev-master",
+        "appBundle":"master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
