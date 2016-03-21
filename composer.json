@@ -14,10 +14,10 @@
         {
             "name": "appBundle",
             "type": "git",
-            "url": "https://github.com/llaull/AppBundleX"
+            "url": "https://github.com/llaull/AppBundleX.git"
         },{
             "type": "vcs",
-            "url": "https://github.com/llaull/domotikBundle"
+            "url": "https://github.com/llaull/domotikBundle.git"
         }
     ],
     "require": {
