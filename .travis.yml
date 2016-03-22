@@ -3,13 +3,23 @@ sudo: false
 
 services:
   - mysql
-
+  
 before_install:
   - composer self-update
+  - cd src
+  - dir
   - git clone https://github.com/llaull/AppBundleX.git
   - git clone https://github.com/llaull/domotikBundle.git
-  - mv  -v src/AppBundleX/* src/AppBundle/
-  - mv  -v src/domotikBundle/* src/Domotique/
+  - mv  -v AppBundleX/* AppBundle/
+  - mv  -v domotikBundle/* Domotique/
+  - cd AppBundle
+  - dir
+  - cd ../
+  - cd AppBundleX
+  - dir
+  - cd ../
+  - dir
+  - cd ../
 
 install:
   - composer install
