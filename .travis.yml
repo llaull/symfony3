@@ -3,7 +3,7 @@ sudo: false
 
 services:
   - mysql
-  
+
 before_install:
   - composer self-update
   - cd src
@@ -20,6 +20,7 @@ before_install:
   - cd ../
   - dir
   - cd ../
+  - mysql -e 'create database test;'
 
 install:
   - composer install
@@ -34,3 +35,13 @@ before_script:
 
 script:
 #  - php bin/codecept run
+
+# script: phpunit --coverage-text --coverage-clover=coverage.clover 
+
+# after_script: 
+  # - wget https://scrutinizer-ci.com/ocular.phar 
+  # - php ocular.phar code-coverage:upload --format=php-clover coverage.clover 
+
+# cache: 
+  # directories: 
+    # - $COMPOSER_CACHE_DIR - See more at: http://frankneff.ch/quality-assurance/2014/04/19/use-travis-build-matrix-to-test-against-multiple-symfony-versions/#sthash.Gdl7N7CG.dpuf
