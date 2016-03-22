@@ -5,10 +5,11 @@ services:
   - mysql
 
 before_install:
+  - composer self-update
   - git clone https://github.com/llaull/AppBundleX.git
   - git clone https://github.com/llaull/domotikBundle.git
-  - mv  -v AppBundleX/* AppBundle/
-  - mv  -v domotikBundle/* Domotique/
+  - mv  -v src/AppBundleX/* src/AppBundle/
+  - mv  -v src/domotikBundle/* src/Domotique/
 
 install:
   - composer install
