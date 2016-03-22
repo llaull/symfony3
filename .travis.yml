@@ -8,6 +8,7 @@ before_install:
   - git clone https://github.com/llaull/AppBundleX.git
   - git clone https://github.com/llaull/domotikBundle.git
   - mv  -v AppBundleX/* AppBundle/
+  - mv  -v domotikBundle/* Domotique/
   - cd AppBundle
   - dir
   - cd ../
