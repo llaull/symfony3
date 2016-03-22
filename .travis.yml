@@ -12,21 +12,14 @@ before_install:
   - git clone https://github.com/llaull/domotikBundle.git
   - mv  -v AppBundleX/* AppBundle/
   - mv  -v domotikBundle/* Domotique/
-  - cd AppBundle
-  - dir
   - cd ../
-  - cd AppBundleX
-  - dir
-  - cd ../
-  - dir
-  - cd ../
-  - mysql -e 'create database test;'
+  - mysql -e 'create database symfony;'
 
 install:
   - composer install
 
 before_script:
-  - mysql -e 'create database test;'
+  - mysql -e 'create database symfony;'
   - php app/console doctrine:schema:create -n
   - php app/console doctrine:fixtures:load -n
   - php app/console doctrine:schema:create -n --env test
