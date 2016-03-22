@@ -4,8 +4,12 @@ sudo: false
 before_install:
   - composer self-update
   - cd src
+  - dir
   - git clone https://github.com/llaull/AppBundleX.git
   - git clone https://github.com/llaull/domotikBundle.git
+  - cd AppBundleX
+  - dir
+  - cd ../
   - dir
   - cd ../
 
