@@ -1,0 +1,34 @@
+filter:
+    paths: [src/*]
+    excluded_paths: [ 'vendor/*', 'tests/*', 'samples/*' ]
+
+before_commands:
+    - "composer self-update"
+	- "cd src"
+	- "dir"
+	- "git clone https://github.com/llaull/AppBundleX.git"
+	- "git clone https://github.com/llaull/domotikBundle.git"
+	- "mv  -v AppBundleX/* AppBundle/"
+	- "mv  -v domotikBundle/* Domotique/"
+	- "cd ../"
+	- "mysql -e 'create database symfony;'"
+
+tools:
+    external_code_coverage: true
+    php_mess_detector: true
+    php_code_sniffer: true
+    sensiolabs_security_checker: true
+    php_pdepend: true
+    php_loc:
+        enabled: true
+        excluded_dirs: [vendor, samples, tests]
+    php_cpd:
+        enabled: true
+        excluded_dirs: [vendor, samples, tests]
+
+after_script:
+ ## Scrutinizer
+ - wget https://scrutinizer-ci.com/ocular.phar
+ - php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml
+
+         
