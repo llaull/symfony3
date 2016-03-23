@@ -27,11 +27,15 @@ before_script:
 script:
 #  - php vendor/phpunit/phpunit/phpunit -c app/ doublon
   - php vendor/phpunit/phpunit/phpunit -c app/ --coverage-text --coverage-clover coverage.xml -c app
+  - dir
+  - cd app/
+  - dir
+  - cd ../
 
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.xml
+  - php ocular.phar code-coverage:upload --format=php-clover app/coverage.xml
 
 # cache: 
   # directories: 
