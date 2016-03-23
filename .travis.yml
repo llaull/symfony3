@@ -26,12 +26,12 @@ before_script:
 
 script:
   - php vendor/phpunit/phpunit/phpunit -c app/
-#  - php vendor/phpunit/phpunit/phpunit --coverage-text --coverage-clover=coverage.clover
+  - php vendor/phpunit/phpunit/phpunit --coverage-text --coverage-clover=coverage.clover
 
 
-# after_script:
-  # - wget https://scrutinizer-ci.com/ocular.phar
-  # - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 
 # cache: 
   # directories: 
