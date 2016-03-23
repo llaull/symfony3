@@ -26,7 +26,7 @@ before_script:
 
 script:
   - php vendor/phpunit/phpunit/phpunit -c app/
-  - php vendor/phpunit/phpunit/phpunit --coverage-text --coverage-clover=coverage.clover
+  - php vendor/phpunit/phpunit/phpunit --coverage-clover=coverage.clover
 
 
 after_script:
