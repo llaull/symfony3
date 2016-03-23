@@ -18,11 +18,11 @@ before_install:
 
 install:
   - composer install
-  - php bin/console fos:user:create test test test --super-admin
 
 before_script:
   - mysql -e 'create database test;'
   - php app/console doctrine:schema:create
+  - php bin/console fos:user:create test test test --super-admin
 
 script:
   - php vendor/phpunit/phpunit/phpunit -c app/
