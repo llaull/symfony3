@@ -14,10 +14,11 @@ before_install:
   - mv  -v domotikBundle/* Domotique/
   - cd ../
   - mysql -e 'create database symfony;'
-  - php bin/console fos:user:create test test test --super-admin
+
 
 install:
   - composer install
+  - php bin/console fos:user:create test test test --super-admin
 
 before_script:
   - mysql -e 'create database test;'
