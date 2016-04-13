@@ -25,6 +25,9 @@ class AppKernel extends Kernel
             // add by composer
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            // WYSIWYG
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+            new FM\ElfinderBundle\FMElfinderBundle(),
 
         ];
 
