@@ -27,7 +27,7 @@ before_script:
 script:
 #  - php vendor/phpunit/phpunit/phpunit -c app/ doublon
 #  - php vendor/phpunit/phpunit/phpunit -c app/ --coverage-text --coverage-clover coverage.xml -c app
-  - php vendor/phpunit/phpunit/phpunit --coverage-clover build/clover.xml
+  - php vendor/phpunit/phpunit/phpunit -c app/ --coverage-clover build/clover.xml
   - dir
 
 
