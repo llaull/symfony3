@@ -12,3 +12,11 @@ parameters:
     mon_mail:
 
     secret: d767cb298c96549dae4a8ee718661441c7f9451c
+
+    #fos config
+    fos.algorithm: sha512
+    fos.iterations: 1
+
+    #webcam url
+    webcams:
+      - http://symfony.next.local/tmp/plup.jpg
