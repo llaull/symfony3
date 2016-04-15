@@ -27,9 +27,13 @@ before_script:
 script:
 #  - php vendor/phpunit/phpunit/phpunit -c app/ doublon
 #  - php vendor/phpunit/phpunit/phpunit -c app/ --coverage-text --coverage-clover coverage.xml -c app
-  - php vendor/phpunit/phpunit/phpunit -c app/ --coverage-clover build/clover.xml
-  - dir
+#  - php vendor/phpunit/phpunit/phpunit -c app/ --coverage-clover build/clover.xml
+  - php vendor/phpunit/phpunit/phpunit --coverage-clover build/logs/clover.xml -c app
+#  - dir
 
+
+after_success:
+  - bin/coveralls -v
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
