@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             //AppBundle avec de frond et le back office
             new AppBundle\BackBundle\BackOfficeBundle(),
             new AppBundle\FrondBundle\FrondOfficeBundle(),
+            new AppBundle\ToDoBundle\AppBundleToDoBundle(),
             // bundle domotique
             new Domotique\DomoboxBundle\DomotiqueDomoboxBundle(),
             new Domotique\ReseauBundle\DomotiqueReseauBundle(),
@@ -28,7 +29,7 @@ class AppKernel extends Kernel
             // WYSIWYG
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
             new FM\ElfinderBundle\FMElfinderBundle(),
-
+            
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
