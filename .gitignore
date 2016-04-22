@@ -1,3 +1,4 @@
+/app/build
 /web/tmp
 /app/bootstrap.php.cache
 /composer.lock

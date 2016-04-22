@@ -1,6 +1,6 @@
 app_bundle_to_do:
     resource: "@AppBundleToDoBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /todo
 
 frond_office_homepage:
     resource: "@FrondOfficeBundle/Resources/config/routing.yml"
