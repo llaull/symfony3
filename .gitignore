@@ -16,6 +16,8 @@
 /web/assets
 /web/bundles/
 /build
-/.idea
+/app/build
+/.idea/symfony2.xml
 /web/uploads/*
 /bin
+
