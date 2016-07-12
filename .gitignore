@@ -15,6 +15,7 @@
 /web/app_dev.php
 /web/assets
 /web/bundles/
+/build
 /.idea
 /web/uploads/*
 /bin
